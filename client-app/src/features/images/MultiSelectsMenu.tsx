@@ -1,21 +1,32 @@
 import { observer } from "mobx-react-lite";
-import { Fragment, ReactElement, useState } from "react";
+import { Fragment, ReactElement, useEffect, useState } from "react";
 import { Button, Grid, Label, Search, Segment } from "semantic-ui-react";
+import ConfirmationMessage from "../../app/common/confirmation/ConfirmationMessage";
 import LoadingComponent from "../../app/layout/loadingComponent";
 import { Tag } from "../../app/models/tag";
-import { useStore } from "../../app/stores/store";
+import { useStore } from "../../app/stores/store"
+import { ImageData } from "../../app/models/imageData";
+import { SettingName } from "../../app/models/userSettings";
 
 interface SearchResult {
     title: string;
     tag: Tag;
 }
 
-export default observer(function MultiSelectMenu(){
-    const {imageStore, tagStore} = useStore();
-    const {multiSelectCombinedTags,multiSelect, loading, addTagToImages, removeTagToImages} = imageStore;
+interface Props {
+    multiSelect : Map<string, ImageData>;
+    onDeleteSelection(): void;
+}
+
+export default observer(function MultiSelectsMenu({multiSelect, onDeleteSelection} : Props){
+    const {imageStore, tagStore, modalStore, userStore} = useStore();
+    const {loading, addTagToImages, removeTagToImages} = imageStore;
     const {tags} = tagStore;
+    const {getSettings} = userStore;
+
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<SearchResult[]>([]);
+    const [multiSelectCombinedTags, setMultiSelectCombinedTags] = useState<Map<number, Tag>>(new Map<number, Tag>());
 
     const loadingStyles = {
         marginTop: '30px',
@@ -23,6 +34,29 @@ export default observer(function MultiSelectMenu(){
         height: 120,
         width: "100%"
     }
+
+    useEffect(() => {
+        const temp : Map<number, Tag> = new Map<number, Tag>();
+        multiSelect.forEach((img) => {
+            img.tags.forEach((tag) => {
+                temp.set(tag.id, tag)
+            })
+        })
+        setMultiSelectCombinedTags(temp);
+    }, [multiSelect])
+
+    useEffect(() => {
+        if(!loading)
+        {
+            const temp : Map<number, Tag> = new Map<number, Tag>();
+            multiSelect.forEach((img) => {
+                img.tags.forEach((tag) => {
+                    temp.set(tag.id, tag)
+                })
+            })
+            setMultiSelectCombinedTags(temp);
+        }
+    }, [loading])
 
     const handleSearchChange = (event: any, { value }: any) => {
         setSearchTerm(value);
@@ -37,7 +71,7 @@ export default observer(function MultiSelectMenu(){
         }));
       };
 
-      const handleResultSelect = (event: any, { result }: any) =>
+    const handleResultSelect = (event: any, { result }: any) =>
     {
         const selectedTag = tags.find((t) => t.id === result.tag.id);
         if(selectedTag)
@@ -47,8 +81,29 @@ export default observer(function MultiSelectMenu(){
         setSearchTerm("");
     }
 
+    type DeleteParams = [Tag, ImageData[]];
     const onClickDelete = (t: Tag) => {
-        removeTagToImages(t, Array.from(multiSelect.values()));
+        if((multiSelect.size === 1 && !getSettings().deleteTag) || !getSettings().deleteMultiTags)
+        {
+            removeTagToImages(t, Array.from(multiSelect.values()))
+        }
+        else
+        {
+            const args: DeleteParams  = [t, Array.from(multiSelect.values())];
+            modalStore.openModal(
+                <ConfirmationMessage
+                    message={`Do you want to remove the tag (${t.name}) from the selection?`}
+                    positiveButton="Remove" negativeButton="Cancel" rememberBox 
+                    settingName={(multiSelect.size === 1) ? SettingName.DeleteTag : SettingName.DeleteMultiTag}
+                    func={removeTagToImages} args={args}
+                />
+            )
+        }
+    }
+
+    const onClickDeleteSelected = () =>
+    {
+        onDeleteSelection();
     }
 
     const renderTags = () => {
@@ -72,7 +127,7 @@ export default observer(function MultiSelectMenu(){
     }
 
     return (
-        <Segment>
+        <Fragment>
             {loading ? (
                 <LoadingComponent styles={loadingStyles}/>
             ):
@@ -91,8 +146,9 @@ export default observer(function MultiSelectMenu(){
                     </Grid.Row>
                     <hr/>
                     {renderTags()}
+                    <Button color='red' onClick={() => onClickDeleteSelected()}>Delete Selected</Button>
                 </Fragment>
             )}
-        </Segment>
+        </Fragment>
     );
 })

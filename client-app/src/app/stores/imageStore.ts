@@ -8,6 +8,7 @@ import { TagImageDto } from "../dtos/tagImageDto";
 import { Tag } from "../models/tag";
 import { boolean } from 'yup';
 import _ from 'lodash';
+import { SortManager } from '../../features/images/sortAlgo';
 
 export default class ImageStore {
     loading : boolean = false;
@@ -17,7 +18,6 @@ export default class ImageStore {
         exclude : []
     };
     searchResult : ImageData[] = [];
-    multiSelect: Map<string, ImageData> = new Map();
     multiSelectCombinedTags: Map<number, Tag> = new Map();
     selectedImage : ImageData | null = null;
     selectedIndex : number | null = null;
@@ -27,6 +27,8 @@ export default class ImageStore {
     uploading: boolean = false;
     uploadingIndex: number = 0;
     uploadedImages: ImageData[] = [];
+
+    sortAlgo: SortManager = new SortManager();
 
     constructor() {
         makeAutoObservable(this)
@@ -45,6 +47,14 @@ export default class ImageStore {
         } finally {
             runInAction(() => this.loading = false);
         }
+    }
+
+    editSearchResult = (imgs : ImageData[]) => {
+        this.searchResult = imgs;
+    }
+
+    sortImages = (index: number, order: boolean) => {
+        this.searchResult = this.sortAlgo.sortImages(this.searchResult, index, order);
     }
 
     addIncludeParam = (id : number) => {
@@ -230,6 +240,29 @@ export default class ImageStore {
         }
     }
 
+    deleteMultiSelectImageList = async (multiSelect : Map<string, ImageData>) => {
+        try
+        {
+            console.log("delete");
+            this.loading = true;
+            const imgs = Array.from(multiSelect.values());
+            console.log("imgs: " + imgs.length)
+            for(let i = 0; i < imgs.length; i++)
+            {
+                console.log(i);
+                await agent.Images.deleteImage(imgs[i].id);
+            }
+        }
+        catch(error)
+        {
+            console.log("error")
+        }
+        finally{
+            runInAction(() => this.loading = false);
+        }
+
+    }
+
     uploadImages = async (files:Blob[]) => {
         this.uploading = true;
         this.uploadingIndex = 0;
@@ -284,6 +317,7 @@ export default class ImageStore {
 
     addTagToImages = async (tag: Tag, images: ImageData[]) =>
     {
+        console.log("add tag: " + tag.name + " to " + images.length)
         this.loading = true;
         try {
             for(let i = 0; i < images.length; i++)
@@ -304,7 +338,7 @@ export default class ImageStore {
         finally
         {
             runInAction(() => {
-                this.generateMultiSelectTagsMap();
+                //this.generateMultiSelectTagsMap();
                 this.loading = false;
             })
         }
@@ -333,7 +367,6 @@ export default class ImageStore {
         try {
             for(let i = 0; i < images.length; i++)
             {
-                console.log(images.length)
                 if(images[i].tags.findIndex(t => t.id === tag.id) !== -1)
                 {
                     const dto : TagImageDto = {imageId: images[i].id, tagId: tag.id};
@@ -349,14 +382,15 @@ export default class ImageStore {
         finally
         {
             runInAction(() => {
-                this.generateMultiSelectTagsMap();
+                //this.generateMultiSelectTagsMap();
                 this.loading = false;
             })
         }
     }
 
-    lastClickId : string = "";
+    //lastClickId : string = "";
     //**********multi select */
+    /*
     selectManyImage = (e: MouseEvent<HTMLButtonElement>, imgClick: ImageData) => {
         const imgData : ImageData | undefined = this.searchResult.find(x => x.id === imgClick.id);
         if(imgData === undefined)
@@ -420,6 +454,7 @@ export default class ImageStore {
     resetMultiSelect = () => {
         this.multiSelect = new Map();
         this.multiSelectCombinedTags = new Map();
+        this.lastClickId = "";
     }
     generateMultiSelectTagsMap = () => {
         this.multiSelectCombinedTags = new Map();
@@ -428,6 +463,6 @@ export default class ImageStore {
                 this.multiSelectCombinedTags.set(tag.id, tag);
             })
         })
-    }
+    }*/
 
 }

@@ -1,18 +1,36 @@
 import { observer } from "mobx-react-lite";
-import React, { Fragment } from "react";
-import { useStore } from "../../app/stores/store";
+import React, { Fragment, useState } from "react";
+import { Grid, Tab, Transition } from "semantic-ui-react";
+import ProfileData from "./panes/ProfileData";
+import ProfileSettings from "./panes/ProfileSettings";
 
 
 
 export default observer(function ProfileCard()
 {
-    const {userStore: {user}} = useStore();
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleTabChange = (index: number) => {
+        setActiveIndex(index);
+    };
+  
+    const panes = [
+        {menuItem: 'Profile', render: () => <ProfileData/>},
+        {menuItem: 'Settings', render: () => <ProfileSettings/>}
+    ]
+
     return (
-        <Fragment>
-            <p>username: {user?.username}</p>
-            <p>display name: {user?.displayName}</p>
-            <p>space used: {user?.spaceUsed}</p>
-            <p>space allowed: {user?.spaceAllowed}</p>
-        </Fragment>
+        <Grid>
+            <Grid.Column width={16}>
+                    <Tab
+                        menu={{fluid: true, vertical: true, tabular: true}}
+                        menuPosition='left'
+                        panes={panes}
+                        activeIndex={activeIndex}
+                        onTabChange={(e, { activeIndex }) => handleTabChange(activeIndex as number)}
+                        key={activeIndex}
+                    />
+            </Grid.Column>
+        </Grid>
     )
 })
