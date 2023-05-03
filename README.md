@@ -30,3 +30,9 @@ upload images to the Cloudinary Cloud. The user can then tag his images and sear
 ### Sort and order your search result with many options
 
 ![Upload page](/client-app/public/assets/presentation/grid.png)
+
+
+### Project setup
+The only configuration needed is to add your Cloudinary Api key to the appsetting.json. You can create an account for free at https://cloudinary.com/
+You also need vscode or visual studio with ASP.NET, and a working MSSQL localhost instance, the database will be create when the project is ran.
+The project use a built version of the react client-app, you do not need Node.js to run it
