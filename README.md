@@ -21,7 +21,7 @@ upload images to the Cloudinary Cloud. The user can then tag his images and sear
 
 ### Upload page example
 
-![Upload page](/IMGWeb/client-app/assets/presentation/upload.png)
+![Upload page](/client-app/assets/presentation/upload.png)
 
 ### Tag Manager dialog menu
 
