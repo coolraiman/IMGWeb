@@ -34,6 +34,10 @@ app.UseCors("CorsPolicy");
 //app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapFallbackToController("index", "Fallback");
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.MapControllers();
 

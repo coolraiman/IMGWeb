@@ -41,6 +41,8 @@ namespace Application.Tags
                     tagDtos.Add(new TagDto(tag, tag.TagImageData.Count()));
                 }
 
+                tagDtos = tagDtos.OrderBy(x => x.Name).ToList();
+
                 return Result<List<TagDto>>.Success(tagDtos);
             }
         }

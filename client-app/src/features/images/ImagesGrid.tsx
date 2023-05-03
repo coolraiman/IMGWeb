@@ -1,19 +1,17 @@
-import React, { Component, useState, MouseEvent, useEffect } from 'react'
+import React, { useState, MouseEvent, useEffect } from 'react'
 import { observer } from "mobx-react-lite";
 import { ImageData } from '../../app/models/imageData';
-import { Button, Container, Grid, Image, Input, Segment} from "semantic-ui-react";
+import { Grid, Image} from "semantic-ui-react";
 import { useStore } from '../../app/stores/store';
-import { Tag } from '../../app/models/tag';
 
 interface Props{
     images: ImageData[];
     onSelect(selected: ImageData) : void;
     onMultiSelect(images: Map<string,ImageData>): void;
     multiSelectMode: boolean;
-    detailsMode: boolean;
 }
 
-export default observer(function ImagesGrid({images, multiSelectMode, detailsMode, onSelect, onMultiSelect} : Props)
+export default observer(function ImagesGrid({images, multiSelectMode, onSelect, onMultiSelect} : Props)
 {
     const {imageStore} = useStore();
     const {loading} = imageStore;
@@ -21,13 +19,8 @@ export default observer(function ImagesGrid({images, multiSelectMode, detailsMod
     const [lastClickId, setLastClickId] = useState("");
     const [multiSelect, setMultiSelect] = useState(new Map<string, ImageData>())
 
-    const onDoubleClickHandler = (img: ImageData) => {
-        //if(!loading)
-        //    selectImage(img)
-    }
-
     useEffect(() => {
-        resetMultiSelect();
+        //resetMultiSelect();
     }, [])
 
     useEffect(() => {
@@ -35,6 +28,8 @@ export default observer(function ImagesGrid({images, multiSelectMode, detailsMod
     }, [multiSelect])
 
     const selectManyImage = (e: MouseEvent<HTMLButtonElement>, imgClick: ImageData) => {
+        if(loading)
+            return;
         const imgData : ImageData | undefined = images.find(x => x.id === imgClick.id);
         let temp: Map<string, ImageData> = multiSelect;
         let tempLastClickId = lastClickId;
@@ -90,26 +85,18 @@ export default observer(function ImagesGrid({images, multiSelectMode, detailsMod
         setMultiSelect(new Map<string,ImageData>(temp));
     }
 
-    const resetMultiSelect = () => {
-        setMultiSelect(new  Map<string, ImageData>());
-        setLastClickId("");
-    }
-
     return (
 
             <Grid celled padded>
                 {images.map((img) =>(
-                    <Grid.Column key={img.id} width={3} {...multiSelect.has(img.id) && {color:"teal"}}
+                    <Grid.Column key={img.id} width={3} {...multiSelect.has(img.id) && {color:"teal"}} style={{height: '150px', padding: '4px'}}
                         onClick={(e: MouseEvent<HTMLButtonElement>) => selectManyImage(e, img)}>
-                        <Button className='transparent_button_layout'>
-                            <Image key={img.id} src={img.url} alt={img.filename}
-                            onDoubleClick={() => onSelect(img)}
-                                />
-                        </Button>
+                            <Image key={img.id} src={img.url} alt={img.filename} style={{ height: '100%', width: 'auto' }} centered
+                                onDoubleClick={() => onSelect(img)}
+                            />
                     </Grid.Column>
                 ))}
             </Grid>
 
     )
 })
-//onDoubleClick={() => onSelect(img, images)}

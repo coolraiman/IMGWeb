@@ -1,0 +1,350 @@
+Date : 2023-04-18 16:49:26
+Directory : c:\Users\craym\Desktop\school\Project\IMGWeb
+Total : 215 files,  52932 codes, 1097 comments, 1608 blanks, all 55637 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |         42 |     36,331 |          0 |         17 |     36,348 |
+| XML                |         14 |      8,715 |         36 |         33 |      8,784 |
+| C#                 |         88 |      5,035 |         61 |      1,236 |      6,332 |
+| TypeScript JSX     |         33 |      1,750 |          6 |        178 |      1,934 |
+| TypeScript         |         22 |        835 |         11 |        107 |        953 |
+| CSS                |          4 |        185 |        951 |         14 |      1,150 |
+| JSON with Comments |          1 |         26 |          0 |          1 |         27 |
+| Markdown           |          1 |         26 |          0 |         21 |         47 |
+| HTML               |          4 |         23 |         23 |          1 |         47 |
+| JavaScript         |          6 |          6 |          9 |          0 |         15 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                     | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                        |        215 |     52,932 |      1,097 |      1,608 |     55,637 |
+| API                                                                                                                      |         55 |     11,440 |        669 |        117 |     12,226 |
+| API (Files)                                                                                                              |          5 |         96 |          5 |         25 |        126 |
+| API\Controllers                                                                                                          |         10 |        367 |          0 |         52 |        419 |
+| API\DTOs                                                                                                                 |          3 |         47 |          0 |          3 |         50 |
+| API\Extensions                                                                                                           |          2 |         77 |          0 |          9 |         86 |
+| API\MiddleWare                                                                                                           |          1 |         37 |          0 |          7 |         44 |
+| API\Properties                                                                                                           |          1 |         41 |          0 |          1 |         42 |
+| API\Services                                                                                                             |          1 |         36 |          0 |          6 |         42 |
+| API\bin                                                                                                                  |         23 |      7,754 |        332 |         10 |      8,096 |
+| API\bin\Debug                                                                                                            |          5 |      1,600 |          0 |          2 |      1,602 |
+| API\bin\Debug\net7.0                                                                                                     |          5 |      1,600 |          0 |          2 |      1,602 |
+| API\bin\Publish                                                                                                          |         13 |      4,553 |        332 |          6 |      4,891 |
+| API\bin\Publish (Files)                                                                                                  |          4 |      1,568 |          0 |          2 |      1,570 |
+| API\bin\Publish\wwwroot                                                                                                  |          9 |      2,985 |        332 |          4 |      3,321 |
+| API\bin\Publish\wwwroot (Files)                                                                                          |          3 |         57 |          0 |          1 |         58 |
+| API\bin\Publish\wwwroot\static                                                                                           |          6 |      2,928 |        332 |          3 |      3,263 |
+| API\bin\Publish\wwwroot\static\css                                                                                       |          1 |         46 |        317 |          0 |        363 |
+| API\bin\Publish\wwwroot\static\js                                                                                        |          2 |          2 |          3 |          0 |          5 |
+| API\bin\Publish\wwwroot\static\media                                                                                     |          3 |      2,880 |         12 |          3 |      2,895 |
+| API\bin\Release                                                                                                          |          5 |      1,601 |          0 |          2 |      1,603 |
+| API\bin\Release\net7.0                                                                                                   |          5 |      1,601 |          0 |          2 |      1,603 |
+| API\wwwroot                                                                                                              |          9 |      2,985 |        332 |          4 |      3,321 |
+| API\wwwroot (Files)                                                                                                      |          3 |         57 |          0 |          1 |         58 |
+| API\wwwroot\static                                                                                                       |          6 |      2,928 |        332 |          3 |      3,263 |
+| API\wwwroot\static\css                                                                                                   |          1 |         46 |        317 |          0 |        363 |
+| API\wwwroot\static\js                                                                                                    |          2 |          2 |          3 |          0 |          5 |
+| API\wwwroot\static\media                                                                                                 |          3 |      2,880 |         12 |          3 |      2,895 |
+| Application                                                                                                              |         50 |      4,058 |         20 |        269 |      4,347 |
+| Application (Files)                                                                                                      |          1 |         18 |          0 |          5 |         23 |
+| Application\AlbumImage                                                                                                   |          3 |         97 |          1 |         20 |        118 |
+| Application\Albums                                                                                                       |         12 |        423 |          0 |         82 |        505 |
+| Application\Core                                                                                                         |          3 |         46 |          0 |          5 |         51 |
+| Application\GenericDtos                                                                                                  |          2 |         22 |          0 |          2 |         24 |
+| Application\Images                                                                                                       |         12 |        463 |         15 |         82 |        560 |
+| Application\Interfaces                                                                                                   |          2 |         21 |          0 |          2 |         23 |
+| Application\Profiles                                                                                                     |          2 |         51 |          0 |          7 |         58 |
+| Application\TagImages                                                                                                    |          3 |        102 |          2 |         18 |        122 |
+| Application\Tags                                                                                                         |          8 |        281 |          2 |         46 |        329 |
+| Application\bin                                                                                                          |          2 |      2,534 |          0 |          0 |      2,534 |
+| Application\bin\Debug                                                                                                    |          1 |      1,267 |          0 |          0 |      1,267 |
+| Application\bin\Debug\net7.0                                                                                             |          1 |      1,267 |          0 |          0 |      1,267 |
+| Application\bin\Release                                                                                                  |          1 |      1,267 |          0 |          0 |      1,267 |
+| Application\bin\Release\net7.0                                                                                           |          1 |      1,267 |          0 |          0 |      1,267 |
+| Domain                                                                                                                   |          9 |        791 |          0 |          9 |        800 |
+| Domain (Files)                                                                                                           |          7 |        105 |          0 |          9 |        114 |
+| Domain\bin                                                                                                               |          2 |        686 |          0 |          0 |        686 |
+| Domain\bin\Debug                                                                                                         |          1 |        343 |          0 |          0 |        343 |
+| Domain\bin\Debug\net7.0                                                                                                  |          1 |        343 |          0 |          0 |        343 |
+| Domain\bin\Release                                                                                                       |          1 |        343 |          0 |          0 |        343 |
+| Domain\bin\Release\net7.0                                                                                                |          1 |        343 |          0 |          0 |        343 |
+| Infrastructure                                                                                                           |          7 |      2,759 |          0 |         26 |      2,785 |
+| Infrastructure (Files)                                                                                                   |          1 |         13 |          0 |          5 |         18 |
+| Infrastructure\Images                                                                                                    |          2 |         63 |          0 |          9 |         72 |
+| Infrastructure\Security                                                                                                  |          2 |         55 |          0 |         12 |         67 |
+| Infrastructure\bin                                                                                                       |          2 |      2,628 |          0 |          0 |      2,628 |
+| Infrastructure\bin\Debug                                                                                                 |          1 |      1,314 |          0 |          0 |      1,314 |
+| Infrastructure\bin\Debug\net7.0                                                                                          |          1 |      1,314 |          0 |          0 |      1,314 |
+| Infrastructure\bin\Release                                                                                               |          1 |      1,314 |          0 |          0 |      1,314 |
+| Infrastructure\bin\Release\net7.0                                                                                        |          1 |      1,314 |          0 |          0 |      1,314 |
+| Persistence                                                                                                              |         15 |      5,018 |         36 |        856 |      5,910 |
+| Persistence (Files)                                                                                                      |          2 |         72 |         10 |         12 |         94 |
+| Persistence\Migrations                                                                                                   |         11 |      2,644 |         26 |        844 |      3,514 |
+| Persistence\bin                                                                                                          |          2 |      2,302 |          0 |          0 |      2,302 |
+| Persistence\bin\Debug                                                                                                    |          1 |      1,151 |          0 |          0 |      1,151 |
+| Persistence\bin\Debug\net7.0                                                                                             |          1 |      1,151 |          0 |          0 |      1,151 |
+| Persistence\bin\Release                                                                                                  |          1 |      1,151 |          0 |          0 |      1,151 |
+| Persistence\bin\Release\net7.0                                                                                           |          1 |      1,151 |          0 |          0 |      1,151 |
+| bin                                                                                                                      |         17 |      8,628 |        332 |          6 |      8,966 |
+| bin\Publish                                                                                                              |         17 |      8,628 |        332 |          6 |      8,966 |
+| bin\Publish (Files)                                                                                                      |          8 |      5,643 |          0 |          2 |      5,645 |
+| bin\Publish\wwwroot                                                                                                      |          9 |      2,985 |        332 |          4 |      3,321 |
+| bin\Publish\wwwroot (Files)                                                                                              |          3 |         57 |          0 |          1 |         58 |
+| bin\Publish\wwwroot\static                                                                                               |          6 |      2,928 |        332 |          3 |      3,263 |
+| bin\Publish\wwwroot\static\css                                                                                           |          1 |         46 |        317 |          0 |        363 |
+| bin\Publish\wwwroot\static\js                                                                                            |          2 |          2 |          3 |          0 |          5 |
+| bin\Publish\wwwroot\static\media                                                                                         |          3 |      2,880 |         12 |          3 |      2,895 |
+| client-app                                                                                                               |         62 |     20,238 |         40 |        325 |     20,603 |
+| client-app (Files)                                                                                                       |          4 |     17,561 |          0 |         24 |     17,585 |
+| client-app\public                                                                                                        |          2 |         45 |         23 |          2 |         70 |
+| client-app\src                                                                                                           |         56 |      2,632 |         17 |        299 |      2,948 |
+| client-app\src (Files)                                                                                                   |          4 |         35 |          5 |          9 |         49 |
+| client-app\src\app                                                                                                       |         27 |      1,029 |          7 |        139 |      1,175 |
+| client-app\src\app\api                                                                                                   |          1 |        113 |          2 |         14 |        129 |
+| client-app\src\app\common                                                                                                |          3 |         99 |          0 |         13 |        112 |
+| client-app\src\app\common\confirmation                                                                                   |          1 |         63 |          0 |         10 |         73 |
+| client-app\src\app\common\form                                                                                           |          1 |         23 |          0 |          2 |         25 |
+| client-app\src\app\common\modals                                                                                         |          1 |         13 |          0 |          1 |         14 |
+| client-app\src\app\dtos                                                                                                  |          3 |         11 |          0 |          0 |         11 |
+| client-app\src\app\layout                                                                                                |          4 |        152 |          1 |         23 |        176 |
+| client-app\src\app\models                                                                                                |          7 |         75 |          0 |          6 |         81 |
+| client-app\src\app\router                                                                                                |          2 |         40 |          0 |          5 |         45 |
+| client-app\src\app\stores                                                                                                |          7 |        539 |          4 |         78 |        621 |
+| client-app\src\features                                                                                                  |         25 |      1,568 |          5 |        151 |      1,724 |
+| client-app\src\features\errors                                                                                           |          3 |         52 |          0 |          5 |         57 |
+| client-app\src\features\home                                                                                             |          1 |         41 |          0 |          1 |         42 |
+| client-app\src\features\images                                                                                           |          9 |        903 |          3 |         88 |        994 |
+| client-app\src\features\profiles                                                                                         |          3 |         81 |          0 |         15 |         96 |
+| client-app\src\features\profiles (Files)                                                                                 |          1 |         30 |          0 |          6 |         36 |
+| client-app\src\features\profiles\panes                                                                                   |          2 |         51 |          0 |          9 |         60 |
+| client-app\src\features\tags                                                                                             |          4 |        160 |          0 |         13 |        173 |
+| client-app\src\features\upload                                                                                           |          3 |        257 |          2 |         27 |        286 |
+| client-app\src\features\users                                                                                            |          2 |         74 |          0 |          2 |         76 |
++--------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                 | language           | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\API.csproj                                                              | XML                |         21 |          0 |          5 |         26 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\AccountController.cs                                        | C#                 |         83 |          0 |         15 |         98 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\AlbumImageController.cs                                     | C#                 |         22 |          0 |          2 |         24 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\AlbumsController.cs                                         | C#                 |         59 |          0 |          9 |         68 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\BaseApiController.cs                                        | C#                 |         30 |          0 |          3 |         33 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\FallbackController.cs                                       | C#                 |         17 |          0 |          1 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\ImagesController.cs                                         | C#                 |         58 |          0 |          8 |         66 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\ProfilesController.cs                                       | C#                 |         13 |          0 |          1 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\TagImageController.cs                                       | C#                 |         23 |          0 |          2 |         25 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\TagsController.cs                                           | C#                 |         35 |          0 |          5 |         40 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Controllers\WeatherForecastController.cs                                | C#                 |         27 |          0 |          6 |         33 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\DTOs\LoginDto.cs                                                        | C#                 |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\DTOs\RegisterDto.cs                                                     | C#                 |         20 |          0 |          1 |         21 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\DTOs\UserDto.cs                                                         | C#                 |         15 |          0 |          1 |         16 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Extensions\ApplicationServiceExtensions.cs                              | C#                 |         41 |          0 |          4 |         45 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Extensions\IdentityServiceExtensions.cs                                 | C#                 |         36 |          0 |          5 |         41 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\MiddleWare\ExceptionMiddleWare.cs                                       | C#                 |         37 |          0 |          7 |         44 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Program.cs                                                              | C#                 |         41 |          5 |         13 |         59 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Properties\launchSettings.json                                          | JSON               |         41 |          0 |          1 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\Services\TokenService.cs                                                | C#                 |         36 |          0 |          6 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\WeatherForecast.cs                                                      | C#                 |          8 |          0 |          5 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\appsettings.Development.json                                            | JSON               |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\appsettings.json                                                        | JSON               |         14 |          0 |          1 |         15 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\API.deps.json                                          | JSON               |      1,553 |          0 |          0 |      1,553 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\API.runtimeconfig.json                                 | JSON               |         20 |          0 |          0 |         20 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\API.staticwebassets.runtime.json                       | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\appsettings.Development.json                           | JSON               |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\appsettings.json                                       | JSON               |         14 |          0 |          1 |         15 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\API.deps.json                                               | JSON               |      1,521 |          0 |          0 |      1,521 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\API.runtimeconfig.json                                      | JSON               |         21 |          0 |          0 |         21 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\appsettings.Development.json                                | JSON               |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\appsettings.json                                            | JSON               |         14 |          0 |          1 |         15 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\asset-manifest.json                                 | JSON               |         31 |          0 |          0 |         31 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\index.html                                          | HTML               |          1 |          0 |          0 |          1 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\manifest.json                                       | JSON               |         25 |          0 |          1 |         26 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\static\css\main.6900ca00.css                        | CSS                |         46 |        317 |          0 |        363 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\static\js\787.627756db.chunk.js                     | JavaScript         |          1 |          1 |          0 |          2 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\static\js\main.9cb2dfea.js                          | JavaScript         |          1 |          2 |          0 |          3 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\static\media\brand-icons.6729d29753e000c17489.svg   | XML                |      1,004 |          4 |          1 |      1,009 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\static\media\icons.62d9dae4e0040e81c980.svg         | XML                |      1,514 |          4 |          1 |      1,519 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Publish\wwwroot\static\media\outline-icons.9c4845b4b41ef40a22fa.svg | XML                |        362 |          4 |          1 |        367 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Release\net7.0\API.deps.json                                        | JSON               |      1,553 |          0 |          0 |      1,553 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Release\net7.0\API.runtimeconfig.json                               | JSON               |         21 |          0 |          0 |         21 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Release\net7.0\API.staticwebassets.runtime.json                     | JSON               |          1 |          0 |          0 |          1 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Release\net7.0\appsettings.Development.json                         | JSON               |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Release\net7.0\appsettings.json                                     | JSON               |         14 |          0 |          1 |         15 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\asset-manifest.json                                             | JSON               |         31 |          0 |          0 |         31 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\index.html                                                      | HTML               |          1 |          0 |          0 |          1 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\manifest.json                                                   | JSON               |         25 |          0 |          1 |         26 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\static\css\main.6900ca00.css                                    | CSS                |         46 |        317 |          0 |        363 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\static\js\787.627756db.chunk.js                                 | JavaScript         |          1 |          1 |          0 |          2 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\static\js\main.49b5addb.js                                      | JavaScript         |          1 |          2 |          0 |          3 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\static\media\brand-icons.6729d29753e000c17489.svg               | XML                |      1,004 |          4 |          1 |      1,009 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\static\media\icons.62d9dae4e0040e81c980.svg                     | XML                |      1,514 |          4 |          1 |      1,519 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\API\wwwroot\static\media\outline-icons.9c4845b4b41ef40a22fa.svg             | XML                |        362 |          4 |          1 |        367 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\AlbumImage\Add.cs                                               | C#                 |         46 |          1 |          9 |         56 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\AlbumImage\AlbumImageDto.cs                                     | C#                 |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\AlbumImage\Remove.cs                                            | C#                 |         39 |          0 |         10 |         49 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\AddView.cs                                               | C#                 |         37 |          0 |          9 |         46 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\AlbumDto.cs                                              | C#                 |         39 |          0 |          3 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\Create.cs                                                | C#                 |         39 |          0 |          8 |         47 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\CreateAlbumDto.cs                                        | C#                 |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\Delete.cs                                                | C#                 |         37 |          0 |         11 |         48 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\Details.cs                                               | C#                 |         43 |          0 |          7 |         50 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\Edit.cs                                                  | C#                 |         41 |          0 |         11 |         52 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\EditAlbumDto.cs                                          | C#                 |         13 |          0 |          1 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\List.cs                                                  | C#                 |         36 |          0 |          6 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\Search.cs                                                | C#                 |         46 |          0 |          6 |         52 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\UpdateFavorite.cs                                        | C#                 |         37 |          0 |          9 |         46 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Albums\UpdateRating.cs                                          | C#                 |         43 |          0 |         10 |         53 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Application.csproj                                              | XML                |         18 |          0 |          5 |         23 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Core\AppException.cs                                            | C#                 |         15 |          0 |          1 |         16 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Core\MappingProfiles.cs                                         | C#                 |         20 |          0 |          1 |         21 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Core\Result.cs                                                  | C#                 |         11 |          0 |          3 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\GenericDtos\IntDto.cs                                           | C#                 |         11 |          0 |          1 |         12 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\GenericDtos\StringDto.cs                                        | C#                 |         11 |          0 |          1 |         12 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\Add.cs                                                   | C#                 |         64 |         15 |         12 |         91 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\AddView.cs                                               | C#                 |         37 |          0 |          9 |         46 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\Delete.cs                                                | C#                 |         45 |          0 |         13 |         58 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\Details.cs                                               | C#                 |         41 |          0 |          7 |         48 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\ImageDataDto.cs                                          | C#                 |         53 |          0 |          3 |         56 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\ImageUploadResult.cs                                     | C#                 |          8 |          0 |          0 |          8 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\List.cs                                                  | C#                 |         37 |          0 |          6 |         43 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\ListNotTagged.cs                                         | C#                 |         40 |          0 |          6 |         46 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\Search.cs                                                | C#                 |         46 |          0 |          6 |         52 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\SearchDto.cs                                             | C#                 |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\UpdateFavorite.cs                                        | C#                 |         37 |          0 |          8 |         45 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Images\UpdateRating.cs                                          | C#                 |         43 |          0 |         11 |         54 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Interfaces\IPhotoAccessor.cs                                    | C#                 |         10 |          0 |          1 |         11 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Interfaces\IUserAccessor.cs                                     | C#                 |         11 |          0 |          1 |         12 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Profiles\Details.cs                                             | C#                 |         36 |          0 |          6 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Profiles\Profile.cs                                             | C#                 |         15 |          0 |          1 |         16 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\TagImages\Add.cs                                                | C#                 |         49 |          1 |          9 |         59 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\TagImages\Remove.cs                                             | C#                 |         41 |          1 |          8 |         50 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\TagImages\TagImageDto.cs                                        | C#                 |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\Create.cs                                                  | C#                 |         47 |          0 |          9 |         56 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\Delete.cs                                                  | C#                 |         41 |          0 |         10 |         51 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\Details.cs                                                 | C#                 |         44 |          1 |          5 |         50 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\Edit.cs                                                    | C#                 |         53 |          0 |         12 |         65 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\EditTagValidator.cs                                        | C#                 |         17 |          0 |          1 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\List.cs                                                    | C#                 |         43 |          1 |          6 |         50 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\TagDto.cs                                                  | C#                 |         23 |          0 |          2 |         25 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\Tags\TagValidator.cs                                            | C#                 |         13 |          0 |          1 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\bin\Debug\net7.0\Application.deps.json                          | JSON               |      1,267 |          0 |          0 |      1,267 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Application\bin\Release\net7.0\Application.deps.json                        | JSON               |      1,267 |          0 |          0 |      1,267 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\Album.cs                                                             | C#                 |         18 |          0 |          1 |         19 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\AlbumImages.cs                                                       | C#                 |         10 |          0 |          0 |         10 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\AppUser.cs                                                           | C#                 |         15 |          0 |          1 |         16 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\Domain.csproj                                                        | XML                |         10 |          0 |          4 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\ImageData.cs                                                         | C#                 |         26 |          0 |          1 |         27 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\Tag.cs                                                               | C#                 |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\TagImageData.cs                                                      | C#                 |         14 |          0 |          1 |         15 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\bin\Debug\net7.0\Domain.deps.json                                    | JSON               |        343 |          0 |          0 |        343 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Domain\bin\Release\net7.0\Domain.deps.json                                  | JSON               |        343 |          0 |          0 |        343 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\Images\CloudinarySettings.cs                                 | C#                 |         13 |          0 |          1 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\Images\ImageAccessor.cs                                      | C#                 |         50 |          0 |          8 |         58 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\Infrastructure.csproj                                        | XML                |         13 |          0 |          5 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\Security\IsHostRequirement.cs                                | C#                 |         33 |          0 |          9 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\Security\UserAccessor.cs                                     | C#                 |         22 |          0 |          3 |         25 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\bin\Debug\net7.0\Infrastructure.deps.json                    | JSON               |      1,314 |          0 |          0 |      1,314 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Infrastructure\bin\Release\net7.0\Infrastructure.deps.json                  | JSON               |      1,314 |          0 |          0 |      1,314 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\DataContext.cs                                                  | C#                 |         59 |         10 |          7 |         76 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230308005118_InitialCreate.Designer.cs             | C#                 |        227 |          2 |         78 |        307 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230308005118_InitialCreate.cs                      | C#                 |        216 |          3 |         25 |        244 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230308211710_CompleteDb.Designer.cs                | C#                 |        377 |          2 |        139 |        518 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230308211710_CompleteDb.cs                         | C#                 |        202 |          3 |         26 |        231 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230315030106_UpdateAlbum.Designer.cs               | C#                 |        377 |          2 |        139 |        518 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230315030106_UpdateAlbum.cs                        | C#                 |         46 |          3 |          6 |         55 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230315181432_AlbumImageCascadeDelete.Designer.cs   | C#                 |        377 |          2 |        139 |        518 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230315181432_AlbumImageCascadeDelete.cs            | C#                 |         14 |          3 |          6 |         23 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230315182511_UpdateSizeTypeToLong.Designer.cs      | C#                 |        377 |          2 |        139 |        518 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\20230315182511_UpdateSizeTypeToLong.cs               | C#                 |         56 |          3 |          8 |         67 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Migrations\DataContextModelSnapshot.cs                          | C#                 |        375 |          1 |        139 |        515 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\Persistence.csproj                                              | XML                |         13 |          0 |          5 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Debug\net7.0\Persistence.deps.json                          | JSON               |      1,151 |          0 |          0 |      1,151 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Release\net7.0\Persistence.deps.json                        | JSON               |      1,151 |          0 |          0 |      1,151 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\API.deps.json                                                   | JSON               |      1,521 |          0 |          0 |      1,521 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\API.runtimeconfig.json                                          | JSON               |         21 |          0 |          0 |         21 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\Application.deps.json                                           | JSON               |      1,267 |          0 |          0 |      1,267 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\Domain.deps.json                                                | JSON               |        343 |          0 |          0 |        343 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\Infrastructure.deps.json                                        | JSON               |      1,314 |          0 |          0 |      1,314 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\Persistence.deps.json                                           | JSON               |      1,151 |          0 |          0 |      1,151 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\appsettings.Development.json                                    | JSON               |         12 |          0 |          1 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\appsettings.json                                                | JSON               |         14 |          0 |          1 |         15 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\asset-manifest.json                                     | JSON               |         31 |          0 |          0 |         31 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\index.html                                              | HTML               |          1 |          0 |          0 |          1 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\manifest.json                                           | JSON               |         25 |          0 |          1 |         26 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\static\css\main.6900ca00.css                            | CSS                |         46 |        317 |          0 |        363 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\static\js\787.627756db.chunk.js                         | JavaScript         |          1 |          1 |          0 |          2 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\static\js\main.9cb2dfea.js                              | JavaScript         |          1 |          2 |          0 |          3 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\static\media\brand-icons.6729d29753e000c17489.svg       | XML                |      1,004 |          4 |          1 |      1,009 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\static\media\icons.62d9dae4e0040e81c980.svg             | XML                |      1,514 |          4 |          1 |      1,519 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\bin\Publish\wwwroot\static\media\outline-icons.9c4845b4b41ef40a22fa.svg     | XML                |        362 |          4 |          1 |        367 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\README.md                                                        | Markdown           |         26 |          0 |         21 |         47 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\package-lock.json                                                | JSON               |     17,447 |          0 |          1 |     17,448 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\package.json                                                     | JSON               |         62 |          0 |          1 |         63 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\public\index.html                                                | HTML               |         20 |         23 |          1 |         44 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\public\manifest.json                                             | JSON               |         25 |          0 |          1 |         26 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\api\agent.ts                                             | TypeScript         |        113 |          2 |         14 |        129 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\common\confirmation\ConfirmationMessage.tsx              | TypeScript JSX     |         63 |          0 |         10 |         73 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\common\form\FormTextInput.tsx                            | TypeScript JSX     |         23 |          0 |          2 |         25 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\common\modals\ModalContainer.tsx                         | TypeScript JSX     |         13 |          0 |          1 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\dtos\numberDto.ts                                        | TypeScript         |          3 |          0 |          0 |          3 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\dtos\searchDto.ts                                        | TypeScript         |          4 |          0 |          0 |          4 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\dtos\tagImageDto.ts                                      | TypeScript         |          4 |          0 |          0 |          4 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\layout\App.tsx                                           | TypeScript JSX     |         38 |          0 |          6 |         44 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\layout\NavBar.tsx                                        | TypeScript JSX     |         51 |          1 |          1 |         53 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\layout\loadingComponent.tsx                              | TypeScript JSX     |         16 |          0 |          2 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\layout\styles.css                                        | CSS                |         47 |          0 |         14 |         61 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\album.ts                                          | TypeScript         |          6 |          0 |          0 |          6 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\imageData.ts                                      | TypeScript         |         18 |          0 |          2 |         20 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\profile.ts                                        | TypeScript         |          6 |          0 |          0 |          6 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\serverError.ts                                    | TypeScript         |          5 |          0 |          0 |          5 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\tag.ts                                            | TypeScript         |         11 |          0 |          1 |         12 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\user.ts                                           | TypeScript         |         13 |          0 |          1 |         14 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\models\userSettings.ts                                   | TypeScript         |         16 |          0 |          2 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\router\RequireAuth.tsx                                   | TypeScript JSX     |         10 |          0 |          3 |         13 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\router\Routes.tsx                                        | TypeScript JSX     |         30 |          0 |          2 |         32 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\albumsStore.ts                                    | TypeScript         |          9 |          0 |          3 |         12 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\commonStore.ts                                    | TypeScript         |         33 |          0 |          7 |         40 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\imageStore.ts                                     | TypeScript         |        254 |          2 |         31 |        287 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\modalStore.ts                                     | TypeScript         |         22 |          0 |          5 |         27 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\store.ts                                          | TypeScript         |         24 |          0 |          4 |         28 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\tagStore.ts                                       | TypeScript         |         79 |          1 |          9 |         89 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\app\stores\userStore.ts                                      | TypeScript         |        118 |          1 |         19 |        138 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\errors\NotFound.tsx                                 | TypeScript JSX     |         17 |          0 |          1 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\errors\ServerError.tsx                              | TypeScript JSX     |         18 |          0 |          1 |         19 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\errors\ValidationError.tsx                          | TypeScript JSX     |         17 |          0 |          3 |         20 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\home\HomePage.tsx                                   | TypeScript JSX     |         41 |          0 |          1 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\ImageDetails.tsx                             | TypeScript JSX     |        272 |          2 |         25 |        299 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\ImageSearchMenu.tsx                          | TypeScript JSX     |         64 |          0 |          6 |         70 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\ImageSearchPage.tsx                          | TypeScript JSX     |        110 |          0 |         13 |        123 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\ImageSortBar.tsx                             | TypeScript JSX     |         45 |          0 |          5 |         50 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\ImagesGrid.tsx                               | TypeScript JSX     |         91 |          1 |         10 |        102 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\MultiSelectsMenu.tsx                         | TypeScript JSX     |        141 |          0 |         13 |        154 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\TagParam.tsx                                 | TypeScript JSX     |         35 |          0 |          3 |         38 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\TagSearchBar.tsx                             | TypeScript JSX     |         62 |          0 |          9 |         71 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\images\sortAlgo.ts                                  | TypeScript         |         83 |          0 |          4 |         87 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\profiles\ProfilePage.tsx                            | TypeScript JSX     |         30 |          0 |          6 |         36 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\profiles\panes\ProfileData.tsx                      | TypeScript JSX     |         14 |          0 |          4 |         18 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\profiles\panes\ProfileSettings.tsx                  | TypeScript JSX     |         37 |          0 |          5 |         42 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\tags\CreateTag.tsx                                  | TypeScript JSX     |         39 |          0 |          2 |         41 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\tags\EditTag.tsx                                    | TypeScript JSX     |         45 |          0 |          2 |         47 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\tags\TagDetails.tsx                                 | TypeScript JSX     |         25 |          0 |          3 |         28 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\tags\TagManager.tsx                                 | TypeScript JSX     |         51 |          0 |          6 |         57 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\upload\ImageDropZone.tsx                            | TypeScript JSX     |         46 |          0 |          7 |         53 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\upload\ImageUploadWidget.tsx                        | TypeScript JSX     |        202 |          2 |         17 |        221 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\upload\UploadPage.tsx                               | TypeScript JSX     |          9 |          0 |          3 |         12 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\users\LoginForm.tsx                                 | TypeScript JSX     |         29 |          0 |          1 |         30 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\features\users\RegisterForm.tsx                              | TypeScript JSX     |         45 |          0 |          1 |         46 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\index.tsx                                                    | TypeScript JSX     |         21 |          0 |          4 |         25 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\react-app-env.d.ts                                           | TypeScript         |          0 |          1 |          1 |          2 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\reportWebVitals.ts                                           | TypeScript         |         13 |          0 |          3 |         16 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\src\setupTests.ts                                                | TypeScript         |          1 |          4 |          1 |          6 |
+| c:\Users\craym\Desktop\school\Project\IMGWeb\client-app\tsconfig.json                                                    | JSON with Comments |         26 |          0 |          1 |         27 |
+| Total                                                                                                                    |                    |     52,932 |      1,097 |      1,608 |     55,637 |
++--------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

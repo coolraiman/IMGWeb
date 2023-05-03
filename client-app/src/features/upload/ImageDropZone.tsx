@@ -43,7 +43,7 @@ export default function ImageDropZone({setFiles}: Props){
     })
 
     return(
-        
+
         <div {...getRootProps()} style={isDragActive ? {...dzStyles, ...dzActive} : dzStyles}>
             <input {...getInputProps()} />
             <Icon name="upload" size='large'/>

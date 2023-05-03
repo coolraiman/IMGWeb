@@ -99,3 +99,4 @@ C:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\Infrastructure
 C:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\SixLabors.ImageSharp.dll
 C:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\craym\Desktop\school\Project\IMGWeb\API\bin\Debug\net7.0\API.staticwebassets.runtime.json

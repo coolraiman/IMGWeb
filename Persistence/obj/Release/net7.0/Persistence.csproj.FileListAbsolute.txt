@@ -1,0 +1,15 @@
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Release\net7.0\Persistence.deps.json
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Release\net7.0\Persistence.dll
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Release\net7.0\Persistence.pdb
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Release\net7.0\Domain.dll
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\bin\Release\net7.0\Domain.pdb
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.csproj.AssemblyReference.cache
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.AssemblyInfoInputs.cache
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.AssemblyInfo.cs
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.csproj.CopyComplete
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.dll
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\refint\Persistence.dll
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\Persistence.pdb
+C:\Users\craym\Desktop\school\Project\IMGWeb\Persistence\obj\Release\net7.0\ref\Persistence.dll

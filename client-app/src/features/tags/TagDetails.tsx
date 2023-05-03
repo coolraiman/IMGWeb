@@ -20,7 +20,6 @@ export default function TagDetails({tag} : Props)
                 <Table.Cell>{tag.references}</Table.Cell>
                 <Table.Cell>
                     <Button onClick={() => (deleteTag(tag.id))}><Icon name='trash' color='red'/></Button>
-                    <Button disabled={tag.references === 0}><Icon name='search' color='blue'/></Button>
                     <Button onClick={() => (setSelectedTag(tag))}><Icon name='edit' color='blue'/></Button>
                 </Table.Cell>
             </Fragment>

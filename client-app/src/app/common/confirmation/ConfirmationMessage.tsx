@@ -1,7 +1,6 @@
 
 import React, { useState } from 'react';
-import { useCookies } from 'react-cookie';
-import { Button, Checkbox, Grid, Header, Label, Segment } from 'semantic-ui-react';
+import { Button, Checkbox, Grid, Header, Segment } from 'semantic-ui-react';
 import { SettingName } from '../../models/userSettings';
 import { useStore } from '../../stores/store';
 
@@ -27,7 +26,6 @@ export default function ConfirmationMessage<F extends (...args: any[]) => any>(p
     const handleConfirm = () => {
         if(props.rememberBox && props.settingName && remember)
         {
-            console.log("set settings")
             setSetting(props.settingName, !remember);
         }
         props.func(...props.args);
@@ -45,21 +43,30 @@ export default function ConfirmationMessage<F extends (...args: any[]) => any>(p
         <Segment>
             <Grid>
                 <Grid.Row key={"header"}>
-                    <Header>{props.message}</Header>
+                    <Header textAlign='center'>{props.message}</Header>
                 </Grid.Row>
                 <Grid.Row>
-                    <Button.Group>
-                        <Button floated='left' key={"confirm"} content={props.positiveButton} positive onClick={() => handleConfirm()}/>
-                        <Button floated='right' key={"cancel"} content={props.negativeButton} negative onClick={() => handleCancel()}/>
-                    </Button.Group>
+                    <Grid.Column width={3}/>
+                    <Grid.Column width={3}>
+                        <Button  key={"confirm"} content={props.positiveButton} negative onClick={() => handleConfirm()}/>
+                    </Grid.Column>
+                    <Grid.Column width={2}/>
+                    <Grid.Column width={3}>
+                        <Button  key={"cancel"} content={props.negativeButton} positive onClick={() => handleCancel()}/>
+                    </Grid.Column>
+                    <Grid.Column width={3}/>
                 </Grid.Row>
                 { props.rememberBox && 
                     <Grid.Row>
-                        <Label>Do not ask again</Label>
-                        <Checkbox name='confirmBox' id={'confirmBox'} onChange={(e) => handleChange()}/>
+                        <Grid.Column width={3}/>
+                        <Grid.Column width={2}>
+                            <Checkbox name='confirmBox' id={'confirmBox'} onChange={(e) => handleChange()}/>
+                        </Grid.Column>
+                        <Grid.Column width={9}>
+                            <p>Do not ask again</p>
+                        </Grid.Column>
                     </Grid.Row>
                 }
-                
             </Grid>
         </Segment>
     )

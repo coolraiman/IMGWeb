@@ -1,4 +1,3 @@
-import { number } from "yup";
 import { ImageData } from "../../app/models/imageData";
 
 export interface SortAlgo 
@@ -50,6 +49,11 @@ export class SortManager
                         return images.sort((a,b) => (ascending ? 1 : -1) * (a.rating - b.rating));
                     }
                 },
+                {name: "Date", detailedName: ["Ascending", "Descending "], sort: (images: ImageData[], ascending: boolean): ImageData[] =>
+                    {
+                        return images.sort((a,b) => (ascending ? 1 : -1) * (a.dateAdded.getDate() - b.dateAdded.getDate()));
+                    }
+                },
                 {name: "Favorite", detailedName: ["Favorite", "Not favorite "], sort: (images: ImageData[], ascending: boolean): ImageData[] =>
                     {
                         return images.sort((a,b) => (ascending ? 1 : -1) * (Number(a.favorite) - Number(b.favorite)));
@@ -58,6 +62,25 @@ export class SortManager
                 {name: "Tags count", detailedName: ["Ascending", "Descending "], sort: (images: ImageData[], ascending: boolean): ImageData[] =>
                     {
                         return images.sort((a,b) => (ascending ? 1 : -1) * (a.tags.length - b.tags.length));
+                    }
+                },
+                {name: "Random", detailedName: ["Fisher-Yates", "Black box "], sort: (images: ImageData[], ascending: boolean): ImageData[] =>
+                    {
+                        const copy = images;
+                        if(ascending)
+                        {
+                            let m = images.length;
+                            while(m)
+                            {
+                                const i = Math.floor(Math.random() * m--);
+                                [copy[m], copy[i]] = [copy[i], copy[m]];
+                            }
+                            return copy;
+                        }
+                        else
+                        {
+                            return images.sort(() => Math.random() - 0.5);
+                        }
                     }
                 }
             ]

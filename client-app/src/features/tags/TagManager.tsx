@@ -24,7 +24,6 @@ export default observer(function TagManager()
     if(!tagsLoaded) return <LoadingComponent content='Loading tags...'/>
     return (
         <Fragment>
-            <h3>nombre de tags : {tags.length}</h3>
                 <Fragment>
                     {(selectedTag) ? (
                         <EditTag/>

@@ -16,7 +16,7 @@ const sleep = (delay: number) => {
     })
 }
 
-axios.defaults.baseURL = "http://localhost:5100/api"
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
 const responseBody = <T> (response: AxiosResponse<T>) => response.data;
 //intercept every request, add token to request
@@ -28,7 +28,7 @@ axios.interceptors.request.use(config => {
 
 //intercept every response
 axios.interceptors.response.use(async response => {
-    await sleep(1000);
+    if(process.env.NODE_ENV === 'development') await sleep(500);
     return response;
 }, (error: AxiosError) => {
     const {data,status, config} = error.response as AxiosResponse;
@@ -54,9 +54,11 @@ axios.interceptors.response.use(async response => {
             break;
         case 401:
             toast.error('unauthorised');
+            router.navigate('/');
             break;
         case 403:
             toast.error('forbidden');
+            router.navigate('/');
             break;
         case 404:
             router.navigate('/not-found');
@@ -81,8 +83,8 @@ const requests = {
 const Tags = {
     list: () => requests.get<Tag[]>('tags'),
     details: (id: number) => requests.get<Tag>(`/tags/${id}`),
-    create: (activity: TagFormValues) => axios.post<void>('/tags', activity),
-    update: (activity: TagFormValues) => axios.put<void>(`/tags/${activity.id}`, activity),
+    create: (tagForm: TagFormValues) => axios.post<void>('/tags', tagForm),
+    update: (tagForm: TagFormValues) => axios.put<void>(`/tags/${tagForm.id}`, tagForm),
     delete: (id: number) => axios.delete<void>(`/tags/${id}`),
 }
 

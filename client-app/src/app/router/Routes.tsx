@@ -8,17 +8,20 @@ import TagManager from "../../features/tags/TagManager";
 import ImageUploadWidget from "../../features/upload/ImageUploadWidget";
 import LoginForm from "../../features/users/LoginForm";
 import App from "../layout/App";
+import RequireAuth from "./RequireAuth";
 
 export const routes: RouteObject[] = [
     {
         path: '/',
         element: <App/>,
         children: [
-            {path: 'profile', element: <ProfilePage />},
-            {path: 'login', element: <LoginForm/>},
-            {path: 'tags', element: <TagManager/>},
-            {path: 'images', element: <ImageSearchPage/>},
-            {path: 'upload', element: <ImageUploadWidget/>},
+            {element: <RequireAuth/>, children: [
+                {path: 'profile', element: <ProfilePage />},
+                {path: 'login', element: <LoginForm/>},
+                {path: 'tags', element: <TagManager/>},
+                {path: 'images', element: <ImageSearchPage/>},
+                {path: 'upload', element: <ImageUploadWidget/>},
+            ]},
             {path: 'not-found', element: <NotFound/>},
             {path: 'server-error', element: <ServerError/>},
             {path: '*', element: <Navigate replace to='/not-found'/>},

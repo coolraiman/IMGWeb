@@ -11,10 +11,8 @@ export default observer(function ProfileData()
     const {userStore: {user}} = useStore();
     return (
         <Tab.Pane>
-            <p>username: {user?.username}</p>
             <p>display name: {user?.displayName}</p>
             <p>space used: {user?.spaceUsed}</p>
-            <p>space allowed: {user?.spaceAllowed}</p>
         </Tab.Pane>
     )
 })

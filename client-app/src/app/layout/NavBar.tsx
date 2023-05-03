@@ -14,7 +14,7 @@ export default observer(function NavBar()
         <Menu inverted fixed='top'>
             <Container>
                 <Menu.Item as={NavLink} to='/' header>
-                    <img src="/assets/logo.png" alt="logo" style={{marginRight: '10px'}}></img>
+                    <Icon name="image outline" size="large"/>
                     IMGWeb
                 </Menu.Item>
                 {isLoggedIn ? (

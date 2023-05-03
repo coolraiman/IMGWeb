@@ -1,6 +1,6 @@
-import React, { Component, Fragment, ReactElement, useState } from 'react'
+import React, { Fragment, ReactElement, useEffect, useState, KeyboardEvent, useRef  } from 'react'
 import { observer } from "mobx-react-lite";
-import { Button, Container, Grid, Header, Icon, Image, Label, Loader, Search, SearchResult, Segment} from "semantic-ui-react";
+import { Button,  Grid, Header, Icon, Image, Label,  List,  Search, Segment} from "semantic-ui-react";
 import { useStore } from '../../app/stores/store';
 import LoadingComponent from '../../app/layout/loadingComponent';
 import { Tag } from '../../app/models/tag';
@@ -8,23 +8,44 @@ import _ from 'lodash';
 import ConfirmationMessage from '../../app/common/confirmation/ConfirmationMessage';
 import fileSize from 'file-size';
 import { SettingName } from '../../app/models/userSettings';
+import { ImageData } from '../../app/models/imageData';
+import { runInAction } from 'mobx';
 
 interface SearchResult {
     title: string;
     tag: Tag;
 }
 
-export default observer(function ImageDetails()
+interface Props {
+    images: ImageData[];
+    clickedImage: ImageData;
+    exit(img:ImageData):void;
+    onDelete(img:ImageData):void;
+}
+
+export default observer(function ImageDetails({images, clickedImage, exit, onDelete} : Props)
 {
     const {imageStore, tagStore, modalStore, userStore} = useStore();
-    const {openModal} = modalStore;
     const {getSettings} = userStore;
-    const {selectedImage, selectedIndex ,updateRatings,updateSelectedImageFavorite, removeSelectedImage,
-        nextImage, previousImage, deleteSelectedImage ,loadingSelectedImageInfo,
-        addTagToSelectedImage, removeTagToSelectedImage} = imageStore;
+    const {updateRatings,updateImageFavorite,
+        deleteImage ,loadingSelectedImageInfo,
+        addTagToImage, removeTagFromImage, addViewToImage} = imageStore;
     const {tags} = tagStore;
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState<SearchResult[]>([]);
+    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedImage, setSelectedImage] = useState<ImageData>(clickedImage);
+    const [mounted, setMounted] = useState(false); // add a flag for component mounting
+
+    useEffect(() => {
+        if(mounted)
+            refreshSelected();
+    }, [images.length])
+    //called only once when component is
+    useEffect(() => {
+        setMounted(true);
+        selectImage(clickedImage);
+    }, [])
 
     const handleSearchChange = (event: any, { value }: any) => {
         setSearchTerm(value);
@@ -40,13 +61,54 @@ export default observer(function ImageDetails()
         }));
       };
 
-      const handleResultSelect = (event: any, { result }: any) =>
+    const refreshSelected = () => {
+        const index = selectedIndex >= images.length ?  0 : selectedIndex;
+        if(index !== -1)
+        {
+            setSelectedImage(images[index]);
+            setSelectedIndex(index);
+            addViewToImage(images[index]);
+        }
+    }
+
+    const selectImage = (img : ImageData) => {
+        const index = images.findIndex(x => x.id === img.id);
+        if(index !== -1)
+        {
+            setSelectedImage(img);
+            setSelectedIndex(index);
+            addViewToImage(img);
+        }
+    }
+
+    
+    const nextImage  = () => {
+        let tempSelectedIndex = selectedIndex + 1;
+        if(tempSelectedIndex >= images.length)
+        {
+            tempSelectedIndex = 0;
+        }
+        selectImage(images[tempSelectedIndex]);
+    }
+
+    const previousImage = () => {
+
+        let tempSelectedIndex = selectedIndex - 1;
+        if(tempSelectedIndex < 0)
+        {
+            tempSelectedIndex = images.length - 1;
+        }
+
+        selectImage(images[tempSelectedIndex]);
+    }
+
+    const handleResultSelect = (event: any, { result }: any) =>
     {
         const selectedTag = tags.find((t) => t.id === result.tag.id);
 
         if(selectedTag !== undefined)
         {
-            addTagToSelectedImage(selectedTag);
+            addTagToImage(selectedImage, selectedTag);
         }
         setSearchTerm("");
     }
@@ -56,13 +118,17 @@ export default observer(function ImageDetails()
         {
             rating = 0;
         }
-        updateRatings(rating, selectedImage!.id);
+        updateRatings(rating, selectedImage.id);
+        runInAction(() => {
+            selectedImage.rating = rating
+            setSelectedImage(selectedImage);
+        })
     }
 
     const onClickDelete = () => {
         if(!getSettings().deleteImage)
         {
-            deleteSelectedImage();
+            handleDelete(selectedImage);
         }
         else
         {
@@ -71,11 +137,52 @@ export default observer(function ImageDetails()
                     message={`Do you want to delete this image?`}
                     positiveButton="Delete" negativeButton="Cancel" rememberBox
                     settingName={SettingName.DeleteImage}
-                    func={deleteSelectedImage} args={[]}
+                    func={handleDelete} args={[selectedImage]}
                 />
             )
         }
     }
+
+    const handleDelete = (img : ImageData) => {
+        deleteImage(selectedImage);
+        onDelete(img);
+    }
+
+    const onClickTagDelete = (tag:Tag) => {
+        if(!getSettings().deleteTag)
+        {
+            removeTagFromImage(selectedImage, tag)
+        }
+        else
+        {
+            modalStore.openModal(
+                <ConfirmationMessage
+                    message={`Do you want to delete the tag?`}
+                    positiveButton="Delete" negativeButton="Cancel" rememberBox
+                    settingName={SettingName.DeleteTag}
+                    func={removeTagFromImage} args={[selectedImage, tag]}
+                />
+            )
+        }
+    }
+
+    const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+        console.log("key event")
+        switch (event.key) {
+          case 'ArrowLeft':
+            previousImage();
+            break;
+          case 'ArrowRight':
+            nextImage();
+            break;
+          case 'Escape':
+            exit(selectedImage);
+            break;
+          default:
+            // do nothing
+            break;
+        }
+      };
 
 
     const renderRating = () => {
@@ -96,69 +203,66 @@ export default observer(function ImageDetails()
     }
 
     const renderFavorite = () => {
-        if(selectedImage?.favorite)
+        if(selectedImage.favorite)
         {
-            return <Icon key={0} name='star' color='yellow' onClick={() => updateSelectedImageFavorite()}/>
+            return <Icon key={0} name='star' color='yellow' onClick={() => updateImageFavorite(selectedImage)}/>
         }
         else
         {
-            return <Icon key={0} name='star' onClick={() => updateSelectedImageFavorite()}/>
+            return <Icon key={0} name='star' onClick={() => updateImageFavorite(selectedImage)}/>
         }
     }
 
     return (
-
-            <Grid columns={2} style={{margin:0}}>
+            <Grid key={selectedImage.id} columns={2} style={{margin:0}} onKeyDown={handleKeyDown} tabIndex={0} >
                 <Grid.Column width={3}>
                     <Segment className='image_info'>
                         <Fragment>
                         {loadingSelectedImageInfo ?
                             <LoadingComponent/>
                         :
-                            <Fragment>
+                            <Fragment key={"frag" + selectedImage.id}>
                                 <Grid>
                                     <Grid.Row columns={3}>
                                         <Grid.Column>
-                                            <Button onClick={() => previousImage()}><Icon name='angle left'/></Button>
+                                            <Button floated='left' onClick={() => previousImage()} color='green' disabled={images.length === 1}>
+                                                <Icon name='angle left'/>
+                                                </Button>
+                                        </Grid.Column>
+                                        <Grid.Column verticalAlign='middle'>
+                                            <Header textAlign='center'>{(selectedIndex+1)}/{images.length}</Header>
                                         </Grid.Column>
                                         <Grid.Column>
-                                            <Label>{(selectedIndex!+1)}/{imageStore.searchResult.length}</Label>
-                                        </Grid.Column>
-                                        <Grid.Column>
-                                            <Button onClick={() => nextImage()}><Icon name='angle right'/></Button>
+                                            <Button floated='right' onClick={() => nextImage()} color='green' disabled={images.length === 1}>
+                                                <Icon name='angle right'/>
+                                                </Button>
                                         </Grid.Column>
                                     </Grid.Row>
                                     <Grid.Row columns={3}>
                                         <Grid.Column>
-                                            <Button primary onClick={() => removeSelectedImage()}>Return</Button>
+                                            <Button floated='left' primary onClick={() => exit(selectedImage)}>Return</Button>
                                         </Grid.Column>
+                                        <Grid.Column/>
                                         <Grid.Column>
-                                            <Label className='h3'>image info</Label>
-                                        </Grid.Column>
-                                        <Grid.Column>
-                                            <Button color="red" onClick={() => onClickDelete()}>Delete</Button>
+                                            <Button floated='right' color="red" onClick={() => onClickDelete()}>Delete</Button>
                                         </Grid.Column>
                                     </Grid.Row>
                                 </Grid>
-                                {/*
-                                <Label>file name : {selectedImage?.filename}</Label><br/>
-                                <Label>name : {selectedImage?.name}</Label><br/>
-                                */ }
-                                <Label>File type : {selectedImage?.extension}</Label><br/>
-                                <Label>File size : {fileSize(selectedImage!.fileSize).human()}</Label><br/>
-                                <Label>Views : {selectedImage?.views}</Label><br/>
-                                <Label>Height : {selectedImage?.height}</Label><br/>
-                                <Label>Width : {selectedImage?.width}</Label><br/>
-                                <Label>Rating : {selectedImage?.rating}</Label>
-                                {renderRating()}<br/>
-                                <Label>Favorite : </Label>
-                                {renderFavorite()}<br/>
-                                <Label>Date added : {new Date(selectedImage!.dateAdded).toLocaleDateString()}</Label><br/>
+                                <List celled>
+                                    <List.Item>File type : {selectedImage?.extension}</List.Item>
+                                    <List.Item>File size : {fileSize(selectedImage!.fileSize).human()}</List.Item>
+                                    <List.Item>Views : {selectedImage?.views}</List.Item>
+                                    <List.Item>Height : {selectedImage?.height}</List.Item>
+                                    <List.Item>Width : {selectedImage?.width}</List.Item>
+                                    <List.Item>Rating : {selectedImage?.rating} | {renderRating()}</List.Item>
+                                    <List.Item>Favorite : {renderFavorite()}</List.Item>
+                                    <List.Item>Date added : {new Date(selectedImage!.dateAdded).toLocaleDateString()}</List.Item>
+                                </List>
                             </Fragment>
                             }
                         </Fragment>
                         <hr/>
-                        <Header textAlign='center'>Tags</Header>
+                        <Header textAlign='center'>Add Tags</Header>
                         <Search
                             onSearchChange={handleSearchChange}
                             onResultSelect={handleResultSelect}
@@ -166,19 +270,27 @@ export default observer(function ImageDetails()
                             results={results}
                             style={{width:"100%"}}
                         />
-                        {selectedImage!.tags.map((tag) => (
-                            <Fragment key={tag.id}>
-                                <Button key={tag.id} onClick={() => removeTagToSelectedImage(tag)}>
-                                    {tag.name} <Icon name='close'
-                                    />
-                                </Button>
-                                <br/>
-                            </Fragment>
-                        ))}
+                        <Header as='h4' textAlign='center'>Tags</Header>
+                        <Grid celled='internally' style={{padding:"0px", margin:"-20px"}}>
+                            {selectedImage.tags.map((tag) => (
+                                <Grid.Row key={tag.id} style={{padding:"0px", margin:"0px"}}>
+                                    <Grid.Column key={tag.id + "col1"} width={12} floated='left'>
+                                        <Label key={tag.id + "label"} style={{width:"100%"}} className="transparent_button_layout">{tag.name}</Label>
+                                    </Grid.Column>
+                                    <Grid.Column key={tag.id + "col2"} width={4} floated='right'>
+                                        <Button key={tag.id + "delete"} inverted color="red" icon="close" onClick={() => onClickTagDelete(tag)}/>
+                                    </Grid.Column>
+                                </Grid.Row>
+                            ))}
+                        </Grid>
+                        {(selectedImage.tags.length === 0) && (
+                            <Header>No tags</Header>
+                        )}
+                        <br/>
                     </Segment>
                 </Grid.Column>
-                <Grid.Column width={13} centered>
-                    <Image src={selectedImage?.url} alt={selectedImage?.filename} centered/>
+                <Grid.Column width={13}>
+                    <Image key={selectedImage.id} src={selectedImage.url} alt={selectedImage.filename} centered/>
                 </Grid.Column>
             </Grid>
     );
