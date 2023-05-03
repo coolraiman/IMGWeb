@@ -23,14 +23,10 @@ upload images to the Cloudinary Cloud. The user can then tag his images and sear
 
 ![Upload page](/client-app/public/assets/presentation/upload.png)
 
-### Tag Manager dialog menu
+### Fullscreen view
 
-![Upload page](/IMG/Assets/GitReadme/tagManager.png)
-
-### Fullscreen view with keyboard navigation
-
-![Upload page](/IMG/Assets/GitReadme/Fullscreen.png)
+![Upload page](/client-app/public/assets/presentation/details.png)
 
 ### Sort and order your search result with many options
 
-![Upload page](/IMG/Assets/GitReadme/sort.png)
+![Upload page](/client-app/public/assets/presentation/grid.png)
