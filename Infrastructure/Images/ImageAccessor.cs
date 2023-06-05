@@ -1,5 +1,4 @@
 using Application.Interfaces;
-using Application.Images;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Http;

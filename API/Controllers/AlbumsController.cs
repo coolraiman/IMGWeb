@@ -1,6 +1,4 @@
 using Application.Albums;
-using MediatR;
-using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Application.GenericDtos;
 

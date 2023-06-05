@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import React, { ReactElement, useState } from "react";
+import { ReactElement, useState } from "react";
 import { Dropdown, Menu } from "semantic-ui-react";
 import { ImageData } from "../../app/models/imageData";
 import { useStore } from "../../app/stores/store";
@@ -28,9 +28,9 @@ export default observer(function ImageSortBar({images, onSort} : Props)
         for(let i = 0; i < sortAlgo.sorts.length; i++)
         {
             sortBar.push(
-                <Menu.Item key={i} disabled={images.length <= 0} 
+                <Menu.Item key={i} disabled={images.length <= 0}
                     style={i === selected ? {backgroundColor: "#0ea5e9", border: "black"} : {}}>
-                    <Dropdown key={i} pointing='top left' 
+                    <Dropdown key={i} pointing='top left'
                         text={i === selected ? sortAlgo.sorts[i].name + " " + sortAlgo.sorts[i].detailedName[order ? 0 : 1] : sortAlgo.sorts[i].name}>
                         <Dropdown.Menu key={i}>
                             <Dropdown.Item key={sortAlgo.sorts[i].name + "_ascending"} text={sortAlgo.sorts[i].detailedName[0]} onClick={() => onSelect(i,true)}/>

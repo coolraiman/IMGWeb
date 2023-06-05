@@ -1,8 +1,5 @@
 using Application.Core;
 using Application.Interfaces;
-using AutoMapper;
-using Domain;
-using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;

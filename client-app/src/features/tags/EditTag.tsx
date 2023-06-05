@@ -1,9 +1,7 @@
 import { ErrorMessage, Formik } from "formik";
-import { values } from "mobx";
 import { observer } from "mobx-react-lite";
 import { Button, Form, Icon, Label, Table } from "semantic-ui-react";
 import FormTextInput from "../../app/common/form/FormTextInput";
-import { Tag } from "../../app/models/tag";
 import { useStore } from "../../app/stores/store";
 
 export default observer(function CreateTag()

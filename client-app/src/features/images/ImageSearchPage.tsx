@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
-import { Fragment, useEffect, useState } from "react";
-import { Container, Grid, Header, Segment } from "semantic-ui-react";
+import { useEffect, useState } from "react";
+import { Container, Grid, Header } from "semantic-ui-react";
 import { ImageData } from "../../app/models/imageData";
 import { useStore } from "../../app/stores/store";
 import ImageDetails from "./ImageDetails";
@@ -101,7 +101,7 @@ export default observer(function ImageSearchPage()
                             <ImageSortBar images={imagesList} onSort={onSort}/>
                         </Grid.Row>
                         <Grid.Row>
-                        {(searched && searchResult.length === 0 && !loading) ? 
+                        {(searched && searchResult.length === 0 && !loading) ?
                             <Header as='h1' textAlign="center">No image found</Header>
                             :
                             <ImagesGrid images={imagesList} multiSelectMode

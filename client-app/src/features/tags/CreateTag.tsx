@@ -1,6 +1,5 @@
 import { ErrorMessage, Formik } from "formik";
-import { values } from "mobx";
-import { Button, Form, Icon, Label, Table, TableCell } from "semantic-ui-react";
+import { Button, Form, Label, Table, TableCell } from "semantic-ui-react";
 import FormTextInput from "../../app/common/form/FormTextInput";
 import { useStore } from "../../app/stores/store";
 

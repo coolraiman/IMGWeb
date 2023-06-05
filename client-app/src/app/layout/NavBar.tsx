@@ -6,7 +6,6 @@ import LoginForm from "../../features/users/LoginForm";
 import RegisterForm from "../../features/users/RegisterForm";
 import { useStore } from "../stores/store";
 
-//<i class="cloud upload icon"></i>
 export default observer(function NavBar()
 {
     const {userStore: {user, logout, isLoggedIn}, modalStore} = useStore();

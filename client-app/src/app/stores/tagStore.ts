@@ -1,6 +1,6 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import agent from "../api/agent";
-import { Tag, TagFormValues } from "../models/tag";
+import { Tag } from "../models/tag";
 
 export default class TagStore {
     tags: Tag[] = [];

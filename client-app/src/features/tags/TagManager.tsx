@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite"
 import { Fragment, useEffect } from "react"
-import { Container, Icon, Search, Segment, Table } from "semantic-ui-react";
+import { Icon, Segment, Table } from "semantic-ui-react";
 import LoadingComponent from "../../app/layout/loadingComponent";
 import { useStore } from "../../app/stores/store"
 import CreateTag from "./CreateTag";

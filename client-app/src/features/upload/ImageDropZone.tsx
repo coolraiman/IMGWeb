@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react'
+import {useCallback} from 'react'
 import {useDropzone} from 'react-dropzone'
 import { Header, Icon } from 'semantic-ui-react';
 

@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Application.Images;
 using Application.Tags;
 using AutoMapper;
 using Domain;

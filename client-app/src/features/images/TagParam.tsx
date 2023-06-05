@@ -1,4 +1,4 @@
-import { Button, Grid, Icon, Label, List } from "semantic-ui-react";
+import { Button, Grid, Label } from "semantic-ui-react";
 import { Tag } from "../../app/models/tag";
 import { useStore } from "../../app/stores/store";
 
@@ -6,7 +6,7 @@ interface Props {
     tag: Tag;
     isInclude : boolean
 }
-export default function TagParam({tag, isInclude} : Props) 
+export default function TagParam({tag, isInclude} : Props)
 {
     const {imageStore} = useStore();
     const {removeIncludeParam, removeExcludeParam} = imageStore;

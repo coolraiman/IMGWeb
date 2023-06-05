@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { Fragment, ReactElement, useEffect, useState } from "react";
-import { Button, Grid, Label, Search, Segment } from "semantic-ui-react";
+import { Button, Grid, Label, Search } from "semantic-ui-react";
 import ConfirmationMessage from "../../app/common/confirmation/ConfirmationMessage";
 import LoadingComponent from "../../app/layout/loadingComponent";
 import { Tag } from "../../app/models/tag";

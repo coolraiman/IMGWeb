@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
-import React, { Fragment, useState } from "react";
-import { Grid, Tab, Transition } from "semantic-ui-react";
+import { useState } from "react";
+import { Grid, Tab } from "semantic-ui-react";
 import ProfileData from "./panes/ProfileData";
 import ProfileSettings from "./panes/ProfileSettings";
 
@@ -13,7 +13,7 @@ export default observer(function ProfileCard()
     const handleTabChange = (index: number) => {
         setActiveIndex(index);
     };
-  
+
     const panes = [
         {menuItem: 'Profile', render: () => <ProfileData/>},
         {menuItem: 'Settings', render: () => <ProfileSettings/>}

@@ -1,4 +1,4 @@
-import React, { useState, MouseEvent, useEffect } from 'react'
+import { useState, MouseEvent, useEffect } from 'react'
 import { observer } from "mobx-react-lite";
 import { ImageData } from '../../app/models/imageData';
 import { Grid, Image} from "semantic-ui-react";

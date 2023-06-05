@@ -1,7 +1,5 @@
 using Application.GenericDtos;
 using Application.Images;
-using Domain;
-using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers

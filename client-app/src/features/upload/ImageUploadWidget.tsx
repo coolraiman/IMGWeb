@@ -1,5 +1,5 @@
-import React, { Fragment, ReactElement, useEffect, useState } from "react";
-import { Button, Container, Grid, GridColumn, Header, Image } from "semantic-ui-react";
+import { Fragment, ReactElement, useEffect, useState } from "react";
+import { Button, Container, Grid, Header, Image } from "semantic-ui-react";
 import ImageDropZone from "./ImageDropZone";
 import { useStore } from "../../app/stores/store";
 import { observer } from "mobx-react-lite";

@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
-import React, { Fragment, useState } from "react";
-import { Button, Checkbox, Divider, Header, Label, Tab, Transition } from "semantic-ui-react";
+import { useState } from "react";
+import { Button, Checkbox, Divider, Header, Label, Tab } from "semantic-ui-react";
 import { UserSettings } from "../../../app/models/userSettings";
 import { useStore } from "../../../app/stores/store";
 import { toast } from "react-toastify";

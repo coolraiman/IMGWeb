@@ -1,8 +1,6 @@
-import React, { Component, useState } from 'react'
 import { observer } from "mobx-react-lite";
-import { Fragment, useEffect } from "react";
-import { Button, Grid, Header, Label, Segment } from "semantic-ui-react";
-import { Tag } from "../../app/models/tag";
+import { useEffect } from "react";
+import { Button, Grid, Header, Segment } from "semantic-ui-react";
 import { useStore } from "../../app/stores/store";
 import TagParam from "./TagParam";
 import TagSearchBar from './TagSearchBar';

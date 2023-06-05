@@ -5,8 +5,6 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Metadata.Profiles.Iptc;
 
 namespace Application.Images
 {
@@ -57,21 +55,6 @@ namespace Application.Images
                     Favorite = false,
                     Metadata = ""
                 };
-                //TODO fix it
-                /*
-                if(metadata.IptcProfile?.Values?.Any()??false)
-                {
-                    foreach(var meta in metadata.IptcProfile.Values)
-                    {
-                        imgData.Metadata += meta.Tag.ToString() + ":{";
-                        foreach(var val in meta.Value)
-                        {
-                            imgData.Metadata += val.ToString() + "-";
-                        }
-                        imgData.Metadata += "}";
-                    }
-                    imgData.Metadata = metadata.IptcProfile.ToString();
-                }*/
 
                 user.ImagesData.Add(imgData);
 
@@ -82,7 +65,7 @@ namespace Application.Images
                     user.SpaceUsed += imgData.FileSize;
                     await _context.SaveChangesAsync();
                     return Result<ImageDataDto>.Success(new ImageDataDto(imgData));
-                } 
+                }
 
                 return Result<ImageDataDto>.Failure("Problem adding photo");
             }

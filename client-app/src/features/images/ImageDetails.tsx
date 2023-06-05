@@ -1,4 +1,4 @@
-import React, { Fragment, ReactElement, useEffect, useState, KeyboardEvent, useRef  } from 'react'
+import React, { Fragment, ReactElement, useEffect, useState, KeyboardEvent  } from 'react'
 import { observer } from "mobx-react-lite";
 import { Button,  Grid, Header, Icon, Image, Label,  List,  Search, Segment} from "semantic-ui-react";
 import { useStore } from '../../app/stores/store';
@@ -81,7 +81,6 @@ export default observer(function ImageDetails({images, clickedImage, exit, onDel
         }
     }
 
-    
     const nextImage  = () => {
         let tempSelectedIndex = selectedIndex + 1;
         if(tempSelectedIndex >= images.length)

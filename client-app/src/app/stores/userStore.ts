@@ -133,6 +133,4 @@ export default class UserStore {
         this.settings = generateUserSettings();
         this.saveSettings();
     }
-
-    
 }

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Application.Core;
 using Application.Interfaces;
 using Domain;
@@ -36,8 +32,9 @@ namespace Application.TagImages
 
                 if(user == null) return null;
 
-                TagImageData tid = await context.TagImageDatas.FirstOrDefaultAsync(x => x.TagId == request.TagImageDto.TagId && x.ImageDataId == request.TagImageDto.ImageId);
-                
+                TagImageData tid = await context.TagImageDatas.FirstOrDefaultAsync(
+                    x => x.TagId == request.TagImageDto.TagId && x.ImageDataId == request.TagImageDto.ImageId);
+
                 if(tid == null) return null;
                 context.TagImageDatas.Remove(tid);
 
